@@ -1,0 +1,61 @@
+# Importing all the necessary libraries
+
+import numpy as np
+import heapq
+import cv2
+
+# Creating an empty array from node (0,0) to (600,250)
+
+graph = np.empty((250,600), dtype=object)
+
+for y in range(250):
+    for x in range(600):
+        graph[y,x] = (x,y)
+
+def move_right(current_node, cost=1): # Function to move the point robot one step to the right
+    x,y = current_node
+    if x<600:
+        child_node = (x+1,y)
+        return child_node, cost
+
+def move_left(current_node, cost=1): # Function to move the point robot one step to the left
+    x,y = current_node
+    if x>0:
+        child_node = (x-1,y)
+        return child_node, cost
+
+def move_up(current_node, cost=1): # Function to move the point robot one step up
+    x,y = current_node
+    if y>0:
+        child_node = (x,y-1)
+        return child_node, cost
+
+def move_down(current_node, cost=1): # Function to move the point robot one step down
+    x,y = current_node
+    if y<250:
+        child_node = (x,y+1)
+        return child_node, cost
+
+def move_up_right(current_node, cost=1.4): # Function to move the point robot one step up and one step to the right
+    x,y = current_node
+    if y>0 and x<600:
+        child_node = (x+1,y-1)
+        return child_node, cost
+
+def move_down_right(current_node, cost=1.4): # Function to move the point robot one step down and one step to the right
+    x,y = current_node
+    if y<250 and x<600:
+        child_node = (x+1,y+1)
+        return child_node, cost
+
+def move_up_left(current_node, cost=1.4): # Function to move the point robot one step up and one step to the left
+    x,y = current_node
+    if y>0 and x>0:
+        child_node = (x-1,y-1)
+        return child_node, cost
+
+def move_down_left(current_node, cost=1.4): # Function to move the point robot one step down and one step to the left
+    x,y = current_node
+    if y<250 and x>0:
+        child_node = (x-1,y+1)
+        return child_node, cost
