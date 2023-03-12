@@ -162,3 +162,35 @@ def make_canvas():
     return obstacle, canvas
 
 obstacle, canvas = make_canvas()
+
+# Taking the user input for the coordinates of the start node and the goal node
+# It will iterate if the start or goal node is in obstacle space or beyond the scope of the map
+
+def user_input():
+    valid_input = False
+    while valid_input == False:
+        start_x = int(input("Enter X coordinate of start node: "))
+        start_y = int(input("Enter Y coordinate of start node: "))
+        goal_x = int(input("Enter X coordinate of goal node: "))
+        goal_y = int(input("Enter Y coordinate of goal node: "))
+        
+        start_node = (start_x,250-start_y)
+        goal_node = (goal_x,250-goal_y)
+    
+        if start_node in obstacle:
+            print(f"Start node {start_node} is in obstacle space. Enter another node.") # Error message if start node is in obstacle space
+            valid_input = False
+        elif goal_node in obstacle:
+            print(f"Goal node {goal_node} is in obstacle space. Enter another node") # Error message if goal node is in obstacle space
+            valid_input = False
+        elif start_x<0 or start_x>600 or goal_x<0 or goal_x>600 or start_y<0 or start_y>250 or goal_y<0 or goal_y>250:
+            print("The coordinates you entered are beyond the scope of the map. Enter valid start and goal coordinates.") # Error message if start or goal node is beyond the scope of the map
+            valid_input = False
+        elif start_node not in obstacle and goal_node not in obstacle:
+            valid_input = True
+            break
+        
+    return start_node, goal_node
+
+start_node, goal_node = user_input()
+
