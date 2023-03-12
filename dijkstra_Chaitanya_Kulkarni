@@ -230,3 +230,25 @@ def dijkstra(start_node, goal_node):
                 pass
 
 dijkstra(start_node, goal_node)
+
+# Backtracking to the start node when goal node is found
+
+def generate_path(start_node, goal_node):
+    backtrack_path = []
+    current_node = goal_node
+    while closed_dict[current_node][0] != closed_dict[start_node][0]:
+        backtrack_path.append((closed_dict[current_node][0], round(closed_dict[current_node][2],1)))
+        current_node = closed_dict[current_node][1]
+    backtrack_path.append((closed_dict[start_node][0], round(closed_dict[start_node][2],1)))
+    backtrack_path.reverse()
+    for node in backtrack_path:
+        cv2.circle(canvas, node[0], 3, (0,255,255), 1) 
+        cv2.imshow("canvas", canvas) # Displaying the path from start node to goal node
+        cv2.waitKey(25)
+
+    return backtrack_path
+
+path = generate_path(start_node, goal_node)
+print(path)
+distance=closed_dict[goal_node][2]
+print(f"Distance = {round(distance)}")
