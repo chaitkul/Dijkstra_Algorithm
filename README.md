@@ -18,4 +18,4 @@ Steps to run the code:
 
 Github link : https://github.com/chaitkul/Dijkstra_Algorithm
 
-Video link: https://drive.google.com/drive/u/2/folders/1nY9XPRbEkL19bMk-byjlJEkac-KftD9n/view
+Video link: https://drive.google.com/file/d/1yOLBvp1FwlgtucL45_z_EuRvCr1SDM3V/view?usp=drive_link
