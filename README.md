@@ -13,4 +13,9 @@ Steps to run the code:
 4. After entering valid inputs, code will be executed and the visualization of the map will be shown with explored nodes and the shortest path.
 5. The path from the start node to goal node and the distance travelled by the point robot will be displayed in the terminal.
 
+![Dijkstra](https://github.com/chaitkul/Dijkstra_Algorithm/assets/127642282/4da7fedc-8799-463a-a487-645179888a54)
+
+
 Github link : https://github.com/chaitkul/Dijkstra_Algorithm
+
+Video link: https://drive.google.com/drive/u/2/folders/1nY9XPRbEkL19bMk-byjlJEkac-KftD9n
