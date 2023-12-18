@@ -15,7 +15,4 @@ Steps to run the code:
 
 ![Dijkstra](https://github.com/chaitkul/Dijkstra_Algorithm/assets/127642282/4da7fedc-8799-463a-a487-645179888a54)
 
-
-Github link : https://github.com/chaitkul/Dijkstra_Algorithm
-
-Video link: https://drive.google.com/file/d/1yOLBvp1FwlgtucL45_z_EuRvCr1SDM3V/view?usp=drive_link
+Video link: https://drive.google.com/file/d/1I54iToiXkJ2uBKTs2gyB3qWxEusfru3t/view?usp=drive_link
